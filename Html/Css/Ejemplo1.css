@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+h1{
+    font-family: 'Anton', sans-serif;
+}
+body{
+    background-color:#EAEAEA;
+    overflow: hidden;
+}
+.container{
+    position: absolute;
+    top: 65%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:1000px;
+    height:600px;
+    padding:50px;
+    background-color: #f5f5f5;
+    box-shadow: 0 30px 50px #bdbdbd;
+}
+#slide{
+    width:max-content;
+    margin-top:50px;
+}
+.item{
+    width:400px;
+    height:280px;
+    background-position: 50% 50%;
+    display: inline-block;
+    transition: 1s;
+    background-size: 200%;
+    position: absolute;
+    z-index: 1;
+}
+.item:nth-child(1){
+    transform: translate(-150%);
+    background-position: 0% 50%;
+    opacity: 0;
+}
+.item:nth-child(2){
+    transform: translate(-40%);
+    background-position: 20% 50%;
+}
+.item:nth-child(3){
+    transform: translate(70%);
+    background-position: 50% 50%;
+}
+.item:nth-child(4){
+    transform: translate(180%);
+    background-position: 80% 50%;
+}
+.item:nth-child(n+5){
+    transform: translate(290%);
+    background-position: 100% 50%;
+    opacity: 0;
+}
+.item .content{
+    position: absolute;
+    top:100%;
+    background-color: #fff;
+    width:80%;
+    padding:0 10%;
+    font-family: system-ui;
+    text-align: center;
+    box-shadow: 0 30px 50px #b9b9b9;
+    transition: 0.5s;
+    overflow: hidden;
+    max-height: 0;
+}
+.item .content .name{
+    font-family: 'Anton', sans-serif;
+}
+.item:hover .content{
+    max-height: 100px;
+}
+.item:hover{
+    background-size: 250%;
+}
+.buttons{
+    position: absolute;
+    bottom:30px;
+    left:0;
+    text-align: center;
+    width:100%;
+}.buttons button{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border:1px solid #555;
+    transition: 0.5s;
+}
+.buttons button:hover{
+    background-color: #bac383;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3.5rem;
+    z-index: 999;
+  }
+  
+  .izsp{
+      display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+      max-width: 5rem;
+  }
+  
+  .artdeco{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+  }
+  
+  .nav-list {
+   list-style-type: none;
+   display: flex;
+   align-items: center;
+   gap: 3rem;
+   margin-left: -5%;
+  }
+  
+  .nav-list a {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .nav-list a:hover{
+      color: #a7a7a7;
+    }
+  
+  .contacto{
+      background-color: #a7a7a7;
+      color: black;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      border: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background-color 0,2s ease;
+      cursor: pointer;
+    }
+    
+  .contacto:hover{
+      background-color: white;
+    }
+  
+  .abrir-menu,
+  .cerrar-menu {
+      display: none;
+  }
+  
+  @media screen and (max-width: 550px) {
+      .abrir-menu,
+      .cerrar-menu
+       {
+          display: block;
+          border: 0;
+          font-size: 1.25rem;
+          background-color: transparent;
+          cursor: pointer;
+      }
+  
+      .contacto{
+          display: none;
+      }
+  
+      .abrir-menu {
+          color: #000000;
+          margin-left: 30px;
+      }
+  
+      .cerrar-menu {
+          color: #ffffff;
+      }
+  
+      .nav {
+          opacity: 0;
+          visibility: hidden;
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+          gap: 1rem;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-color: black;
+          padding: 1.9rem;
+          box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+      }
+  
+      .nav.visible {
+          opacity: 1;
+          visibility: visible;
+      }
+      
+      .nav-list {
+          flex-direction: column;
+          align-items: end;
+      }
+  
+      .nav-list li a {
+          color: #ecececec;
+      }
+  
+      .titulo{
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: black;
+      }
+  
+      .tagbox{
+        display: none;
+      }
+
+.container{
+
+    transform: translate(-50%,-50%);
+    width: 100%; /* Ajustamos el ancho al 90% de la pantalla */
+    max-width: 600px; /* Establecemos un ancho máximo para que no se extienda demasiado */
+    height: 60%; /* Ajustamos la altura al 60% de la pantalla */
+    padding: 30px; /* Reducimos el padding */
+
+}
+.item{
+    width: 40%; /* Ajustamos el ancho al 40% de la pantalla */
+}
+.item .content{
+    width: 80%; /* Ajustamos el ancho al 80% de la pantalla */
+}
+  }
