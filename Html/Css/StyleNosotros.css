@@ -229,7 +229,7 @@ header {
         font-size: 60px;
     }
     .arrows{
-        top: 95%;
+        display:none;
     }
 
     .abrir-menu,
