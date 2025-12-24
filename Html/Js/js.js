@@ -10,7 +10,7 @@ cerrar.addEventListener("click", () => {
     nav.classList.remove("visible");
 })
 
-const imagenes = document.querySelectorAll('.lazy');
+const imagenes = document.querySelectorAll('.item');
 
 const observador = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -24,3 +24,4 @@ const observador = new IntersectionObserver((entries) => {
 });
 
 imagenes.forEach(img => observador.observe(img));
+
