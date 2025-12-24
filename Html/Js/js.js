@@ -17,11 +17,12 @@ const observador = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       const img = entry.target;
       img.src = img.dataset.src; // Aquí JS carga la imagen real
-      img.classList.remove('lazy');
+      img.classList.remove('item');
       observador.unobserve(img); // Ya la cargó, deja de vigilarla
     }
   });
 });
 
 imagenes.forEach(img => observador.observe(img));
+
 
